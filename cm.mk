@@ -21,7 +21,7 @@ $(call inherit-product, device/lge/vs980/full_vs980.mk)
 PRODUCT_DEVICE := vs980
 PRODUCT_NAME := cm_vs980
 PRODUCT_BRAND := LGE
-PRODUCT_MODEL := LG-E980
+PRODUCT_MODEL := LG-VS980
 PRODUCT_MANUFACTURER := LGE
 
 #PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=google/occam/mako:4.2.2/JDQ39/573038:user/release-keys PRIVATE_BUILD_DESC="occam-user 4.2.2 JDQ39 573038 release-keys"

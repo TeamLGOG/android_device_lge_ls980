@@ -14,30 +14,14 @@
 # limitations under the License.
 #
 
-# This file includes all definitions that apply to ALL gee-series devices, and
-# are also specific to geefhd devices
-#
-# Everything in this directory will become public
-
 ## (2) Also get non-open-source specific aspects if available
 $(call inherit-product-if-exists, vendor/lge/vs980/vs980-vendor.mk)
 
 ## overlays
-DEVICE_PACKAGE_OVERLAYS += device/lge/vs980/overlay
+DEVICE_PACKAGE_OVERLAYS := device/lge/vs980/overlay
 
-## common overlays
-DEVICE_PACKAGE_OVERLAYS += device/lge/vs980/overlay
-
-PRODUCT_PACKAGES := \
-	lights.vs980
-
-# Recovery
-PRODUCT_COPY_FILES += \
-    device/lge/vs980/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
-
-#TWRP fstab
-PRODUCT_COPY_FILES += \
-    device/lge/vs980/configs/twrp.fstab:recovery/root/etc/twrp.fstab
+# Inherit from d800-common
+$(call inherit-product, device/lge/d800-common/g2.mk)
 
 # Enable for debugging
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -63,22 +47,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
         telephony.sms.pseudo_multipart=1 \
         DEVICE_PROVISIONED=1
 
-
-# GPS configuration
-PRODUCT_COPY_FILES += \
-        device/lge/vs980/configs/gps.conf:system/etc/gps.conf
-
-# Ramdisk
-PRODUCT_COPY_FILES += \
-    device/lge/vs980/ramdisk/init.g2.rc:root/init.g2.rc \
-    device/lge/vs980/ramdisk/ueventd.g2.rc:root/ueventd.g2.rc \
-    device/lge/vs980/ramdisk/fstab.g2:root/fstab.g2
-
-
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
-
-# CameraHAL
-PRODUCT_PACKAGES += \
-   camera.vs980
