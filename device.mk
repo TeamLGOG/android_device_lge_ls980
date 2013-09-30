@@ -15,10 +15,10 @@
 #
 
 ## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/lge/vs980/vs980-vendor.mk)
+$(call inherit-product-if-exists, vendor/lge/ls980/ls980-vendor.mk)
 
 ## overlays
-DEVICE_PACKAGE_OVERLAYS := device/lge/vs980/overlay
+DEVICE_PACKAGE_OVERLAYS := device/lge/ls980/overlay
 
 # Inherit from d800-common
 $(call inherit-product, device/lge/d800-common/g2.mk)
@@ -34,8 +34,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Telephony Properties
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.cdma.home.operator.numeric=310004 \
-        ro.cdma.home.operator.alpha=Verizion \
+        ro.cdma.home.operator.numeric=310120 \
+        ro.cdma.home.operator.alpha=Sprint \
         telephony.lteOnCdmaDevice=1 \
         telephony.lte.cdma.device=1 \
         ro.telephony.default_network=8 \

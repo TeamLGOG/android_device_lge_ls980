@@ -1,2 +1,2 @@
-require board=vs980
+require board=ls980
 

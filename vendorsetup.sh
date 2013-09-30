@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-add_lunch_combo cm_vs980-userdebug
+add_lunch_combo cm_ls980-userdebug

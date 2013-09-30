@@ -23,12 +23,12 @@ PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-PRODUCT_DEVICE := vs980
-PRODUCT_NAME := full_vs980
+PRODUCT_DEVICE := ls980
+PRODUCT_NAME := full_ls980
 PRODUCT_BRAND := LGE
-PRODUCT_MODEL := LG-VS980
+PRODUCT_MODEL := LG-ls980
 PRODUCT_MANUFACTURER := LGE
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/lge/vs980/device.mk)
+$(call inherit-product, device/lge/ls980/device.mk)

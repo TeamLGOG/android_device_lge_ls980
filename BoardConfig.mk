@@ -14,14 +14,14 @@
 # limitations under the License.
 #
 
-TARGET_KERNEL_CONFIG := cyanogenmod_g2-vzw-perf_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_g2-spr-perf_defconfig
 
 
 # inherit from d800-common
 -include device/lge/d800-common/BoardConfigCommon.mk
 
 # assert
-TARGET_OTA_ASSERT_DEVICE := d800
+TARGET_OTA_ASSERT_DEVICE := ls980
 
 # inherit from the proprietary version
 -include vendor/lge/d800-common/BoardConfigVendor.mk
